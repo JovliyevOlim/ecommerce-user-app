@@ -1,4 +1,6 @@
-export const api = 'http://localhost:2000/api'
+const  baseUrl = 'https://shopping-cart-rest-server.herokuapp.com/api'
+
+export const api = baseUrl
 export const generatePublicUrl =  (filename)=>{
-    return `http://localhost:2000/public/${filename}`
+    return `${baseUrl}/public/${filename}`
 }
