@@ -43,7 +43,7 @@ function ProductStore(props) {
                                             style={{display: 'block',textDecoration:'none'}}
                                             key={product.name} className="productContainer">
                                             <div className="productImgContainer">
-                                                <img src={generatePublicUrl(product.productPictures[0].img)}/>
+                                                <img src={(product.productPictures[0].img)}/>
                                             </div>
                                             <div className={'productInfo'}>
                                                 <div style={{margin: '5px 0'}}>{product.name}</div>

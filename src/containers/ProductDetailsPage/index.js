@@ -3,7 +3,7 @@ import Layout from "../../components/Layout";
 import {useDispatch, useSelector} from "react-redux";
 import {useParams,useNavigate} from "react-router-dom";
 import {addToCart, getProductDetailsBy} from "../../action";
-import {generatePublicUrl} from "../../urlConfig";
+// import {generatePublicUrl} from "../../urlConfig";
 import {IoIosStar, IoIosArrowForward, IoMdCart} from 'react-icons/io'
 import {BiDollar} from 'react-icons/bi'
 import {AiFillThunderbolt} from 'react-icons/ai'
@@ -40,7 +40,7 @@ function ProductDetailsPage(props) {
                         {
                             product.productDetails.productPictures.map((thumb, index) =>
                                 <div key={index} className={'thumbnail active'}>
-                                    <img src={generatePublicUrl(thumb.img)} alt={thumb.img}/>
+                                    <img src={(thumb.img)} alt={thumb.img}/>
                                 </div>
                             )
                         }
@@ -48,7 +48,7 @@ function ProductDetailsPage(props) {
                     <div className="productDescContainer">
                         <div className="productDescImgContainer">
                             <img style={{width: '100%', height: '95%'}}
-                                 src={generatePublicUrl(product.productDetails.productPictures[0].img)}
+                                 src={(product.productDetails.productPictures[0].img)}
                                  alt={`${product.productDetails.productPictures[0].img}`}
                             />
                         </div>

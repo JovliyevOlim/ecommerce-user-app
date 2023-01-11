@@ -34,6 +34,7 @@ function ProductPage(props) {
                        style={{display:'block',height:'500px'}}
                        href={banner.navigateTo}
                    >
+                       {console.log(banner.img)}
                        <img src={banner.img} style={{width:'100%', height:'100%'}} alt={banner.img}/>
                    </a>
                    )
